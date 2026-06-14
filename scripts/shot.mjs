@@ -13,7 +13,7 @@ const browser = await puppeteer.launch({
   args: ['--no-sandbox', '--force-color-profile=srgb'],
 })
 
-async function shot(name, width, height, openLabels = [], closeAll = false) {
+async function shot(name, width, height, openLabels = [], closeAll = false, scroll = false) {
   const page = await browser.newPage()
   await page.setViewport({ width, height, deviceScaleFactor: 1 })
   await page.goto(URL, { waitUntil: 'networkidle2' })
@@ -33,15 +33,20 @@ async function shot(name, width, height, openLabels = [], closeAll = false) {
     }, label)
     await sleep(450)
   }
+  if (scroll) {
+    await page.evaluate(() => {
+      document.querySelectorAll('.window-scroll').forEach((el) => (el.scrollTop = 99999))
+    })
+    await sleep(500)
+  }
   await page.screenshot({ path: `.shots/${name}.png` })
   await page.close()
   console.log('saved', name)
 }
 
-await shot('desktop', 1366, 850, [], true)
-await shot('detail', 1366, 850, ['Vertaler.app', 'CTO.exe'])
-await shot('mobile', 390, 844, ['Vertaler.app'])
-await shot('mobile-home', 390, 844, [], true)
+await shot('m-keynote', 390, 980, ['Keynote.exe'], false, true)
+await shot('m-boekhouding', 390, 980, ['Boekhouding.xls'], false, true)
+await shot('m-netwerk', 390, 980, ['Netwerk.app'], false, true)
 
 await browser.close()
 console.log('done')

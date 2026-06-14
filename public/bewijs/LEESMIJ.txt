@@ -1,17 +1,21 @@
-BEWIJS / SCREENSHOTS
-====================
+BEWIJS / SCREENSHOTS / DOCUMENTEN
+=================================
 
-Zet hier je afbeeldingen (screenshots, foto's) neer, bijvoorbeeld:
+Zet hier je bestanden neer (foto's, screenshots, PDF's) en koppel ze in
+src/data/apps.ts bij het juiste onderwerp.
 
-  public/bewijs/keynote.jpg
-  public/bewijs/kaires-website.png
-  public/bewijs/sheets-kosten.png
+FOTO / SCREENSHOT (toont een polaroid, klikbaar om te vergroten):
+  bewijs: [{ label: 'Onze keynote', image: '/bewijs/keynote-podium.jpeg' }]
 
-Verwijs er vervolgens naar in  src/data/apps.ts  bij het juiste onderwerp:
+DOCUMENT / LINK (toont een klikbare kaart, opent in nieuw tabblad):
+  bewijs: [{ label: 'Netwerkverslag', href: '/bewijs/netwerkverslag-kaires.pdf' }]
+  bewijs: [{ label: 'Kaires-website', href: 'https://kaires.nl/' }]   (externe link mag ook)
 
-  bewijs: [
-    { label: 'Keynote', image: '/bewijs/keynote.jpg' },
-    { label: 'Kostenoverzicht in Sheets', image: '/bewijs/sheets-kosten.png' },
-  ]
+Het base-path (/stijn-os/) wordt automatisch toegevoegd; gebruik dus gewoon
+'/bewijs/...'. Een item zonder image en zonder href verschijnt als lege polaroid.
 
-Een bewijs zonder "image" verschijnt als lege polaroid met alleen het bijschrift.
+Nu aanwezig:
+  keynote-podium.jpeg        -> Keynote.exe
+  kostentabel-kaires.png     -> Boekhouding.xls
+  netwerkverslag-kaires.pdf  -> Netwerk.app
+  ontwikkelcanvas.pdf        -> Spiegel.sys

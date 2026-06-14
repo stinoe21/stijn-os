@@ -37,10 +37,7 @@ export const APPS: AppItem[] = [
     reflectie:
       'Ik koos bewust voor een besturingssysteem als vorm. Het laat in één klap zien wat mijn grootste ontwikkeling is: techniek niet als doel, maar als manier om een idee tastbaar, begrijpbaar en bruikbaar te maken.',
     quote: KERNZIN,
-    bewijs: [
-      { label: 'Ontwikkelcanvas, 11 maart (mijn startpunt)' },
-      { label: 'Deze site — gebouwd in React/TypeScript' },
-    ],
+    bewijs: [],
     vervolgstap: KERNONTWIKKELING,
   },
 
@@ -62,11 +59,8 @@ export const APPS: AppItem[] = [
     reflectie:
       'Techniek was voor mij geen losse hobby. Ik bouwde om Kaires te laten bestaan als onderneming: professioneler, testbaar en verkoopbaar. Daardoor veranderde mijn rol van "iemand die techniek interessant vindt" naar CTO die verantwoordelijkheid neemt voor wat we technisch leveren.',
     quote: 'Ik bouwde niet om te bouwen. Ik bouwde zodat Kaires kon bestaan als onderneming.',
-    bewijs: [
-      { label: 'Kaires-website / app' },
-      { label: 'Automatiseringen & workflows' },
-      { label: 'Technische setup (o.a. speler)' },
-    ],
+    // De live Kaires-website is hét tastbare bewijs van wat ik technisch bouwde.
+    bewijs: [{ label: 'Kaires-website (live, kaires.nl)', href: 'https://kaires.nl/' }],
     vervolgstap:
       'Software engineering verder verdiepen, maar altijd gekoppeld aan klantwaarde en haalbaarheid.',
   },
@@ -96,10 +90,7 @@ export const APPS: AppItem[] = [
     ],
     reflectie:
       'Door techniek te vertalen naar klantwaarde, haalbaarheid en vertrouwen werd het niet alleen iets van mij, maar iets waar het hele team en onze klanten iets aan hadden. Dat is voor een onderneming onmisbaar.',
-    bewijs: [
-      { label: 'Uitleg / one-pager Kaires' },
-      { label: 'Keynote-slides waarin techniek simpel wordt uitgelegd' },
-    ],
+    bewijs: [],
     vervolgstap:
       'Technische keuzes in elk gesprek nog scherper koppelen aan businesswaarde.',
   },
@@ -123,11 +114,7 @@ export const APPS: AppItem[] = [
     reflectie:
       'Ik leerde dat sales niet alleen bellen is, maar ook zichtbaar worden, je verhaal testen, vertrouwen opbouwen en opvolgen. Uit mijn netwerk-assessment bleek het ook: elke keer dat ik Kaires uitlegde, werd het verhaal scherper.',
     quote: 'Elke keer dat ik Kaires uitlegde, werd het verhaal scherper.',
-    bewijs: [
-      { label: 'Keynote (foto / opname)' },
-      { label: 'Slides' },
-      { label: 'Opvolging van warme leads' },
-    ],
+    bewijs: [{ label: 'Onze keynote op het podium (Max & Stijn)', image: '/bewijs/keynote-podium.jpeg' }],
     vervolgstap:
       'Scherper leren closen: prijs, commitment en vervolgstappen duidelijker durven benoemen.',
   },
@@ -148,10 +135,7 @@ export const APPS: AppItem[] = [
     ],
     reflectie:
       'Ik leerde dat een netwerk pas waardevol wordt als je er actie aan koppelt: opvolgen, vragen stellen, een vervolgafspraak maken. Verbinden is mijn kracht; daar bewust iets mee dóén is mijn groei.',
-    bewijs: [
-      { label: 'Events / netwerkmomenten' },
-      { label: 'Gesprekken met stakeholders & partners' },
-    ],
+    bewijs: [{ label: 'Netwerkverslag Kaires', href: '/bewijs/netwerkverslag-kaires.pdf' }],
     vervolgstap: 'Contacten consequenter omzetten in concrete vervolgstappen.',
   },
 
@@ -173,7 +157,12 @@ export const APPS: AppItem[] = [
     reflectie:
       'Mijn groei zit erin dat ik vaker richting ben gaan geven: als CTO, in technische keuzes en in het verhaal van Kaires. Mijn doel is niet om minder verbindend te worden, maar om verbinding te combineren met stevigheid.',
     quote: 'Verbinden is mijn kracht. Richting geven is mijn groei.',
-    bewijs: [{ label: 'Enneagram-uitslag' }, { label: 'Ontwikkelcanvas 11 maart' }],
+    bewijs: [
+      // Enneagram-verslag volgt — voeg toe in public/bewijs/ en koppel hier
+      // met image: '/bewijs/...' of href: '/bewijs/...'
+      { label: 'Enneagram-uitslag' },
+      { label: 'Ontwikkelcanvas — 11 maart', href: '/bewijs/ontwikkelcanvas.pdf' },
+    ],
     vervolgstap: 'Minder snel meebewegen; sneller en duidelijker richting geven.',
   },
 
@@ -194,10 +183,7 @@ export const APPS: AppItem[] = [
     reflectie:
       'Ik ben minder gaan wachten op zekerheid en meer gaan leren door actie. Fouten werden onderdeel van het proces in plaats van iets om te vermijden.',
     quote: 'Ik leerde door te doen, niet door te wachten tot ik zeker wist dat het goed zat.',
-    bewijs: [
-      { label: 'Live keynote met een nog onaf concept' },
-      { label: 'Technische keuzes onder onzekerheid' },
-    ],
+    bewijs: [],
     vervolgstap: 'Bewuster afgewogen risico’s nemen en sneller valideren.',
   },
 
@@ -220,7 +206,9 @@ export const APPS: AppItem[] = [
       'Ik ben geen boekhouder geworden, maar ik ben wél meer eigenaar geworden van de financiële basis van onze onderneming. Ik leerde dat een bedrijf niet alleen draait om een goed idee of een werkend product, maar ook om overzicht, verantwoordelijkheid en discipline.',
     quote:
       'Ondernemen werd concreter toen ik niet alleen aan Kaires bouwde, maar ook ging begrijpen wat er financieel nodig is om het draaiende te houden.',
-    bewijs: [{ label: 'Verstuurde facturen' }, { label: 'Kostenoverzicht in Sheets' }],
+    // De factuur (2026-0001.pdf) staat klaar, maar is privacygevoelig (klantgegevens)
+    // en is daarom nog NIET gepubliceerd. Zeg het als je 'm toch wilt toevoegen.
+    bewijs: [{ label: 'Kostenoverzicht in Sheets', image: '/bewijs/kostentabel-kaires.png' }],
     vervolgstap:
       'Beter worden in begrotingen, marges en prijsstrategie, zodat ik zakelijke keuzes onderbouw met cijfers en niet alleen op gevoel.',
   },
@@ -246,7 +234,7 @@ export const APPS: AppItem[] = [
       'Deze leerdoelen zijn niet bedacht voor een formulier; ze komen rechtstreeks voort uit wat ik deze minor tegenkwam toen ik moest kiezen, presenteren, verkopen en leveren.',
     quote:
       'Mijn volgende stap is niet alleen beter bouwen, maar ook scherper richting geven aan wat er met dat bouwen mogelijk wordt.',
-    bewijs: [{ label: 'Nieuwe leerdoelen, voortgekomen uit deze minor' }],
+    bewijs: [],
     vervolgstap:
       'Verbinding (mijn kracht) combineren met stevigheid en commerciële scherpte.',
   },

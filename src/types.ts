@@ -32,16 +32,22 @@ export type IconKey =
   | 'boekhouding'
   | 'update'
 
-/** Eén bewijsstuk (verschijnt als polaroid / in de bewijs-sectie). */
+/** Eén bewijsstuk: een foto (polaroid) of een link naar een document (PDF). */
 export interface BewijsItem {
   /** Bijschrift. */
   label: string
   /**
-   * Optioneel pad naar een screenshot/foto.
-   * Zet je bestand in /public/bewijs/ en verwijs ernaar als '/bewijs/jouwfoto.png'
-   * (Vite plaatst /public op de root, ook onder het GitHub Pages base-path).
+   * Optioneel pad naar een screenshot/foto -> toont een polaroid.
+   * Zet je bestand in public/bewijs/ en verwijs ernaar als '/bewijs/jouwfoto.png'
+   * (het base-path wordt automatisch toegevoegd).
    */
   image?: string
+  /**
+   * Optionele link naar een document -> toont een klikbare documentkaart.
+   * Een lokaal PDF: zet 'm in public/bewijs/ en gebruik '/bewijs/verslag.pdf'.
+   * Een externe link (bv. Google Drive) mag ook: 'https://...'.
+   */
+  href?: string
 }
 
 /** Eén programma/venster op het bureaublad = één onderdeel van mijn ontwikkeling. */

@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { withBase } from '../lib/asset'
 import type { AppItem, BewijsItem } from '../types'
 import CriteriaBadge from './CriteriaBadge'
 
@@ -12,25 +13,61 @@ function SectionLabel({ children }: { children: ReactNode }) {
 }
 
 function Polaroid({ item, rotate }: { item: BewijsItem; rotate: string }) {
-  return (
-    <figure
-      className={`w-[140px] shrink-0 bg-white p-1.5 pb-5 shadow-window ${rotate}`}
-      title="Bewijs — vervang dit door een echte screenshot/foto (zie src/data/apps.ts)"
-    >
+  const cls = `block w-[140px] shrink-0 bg-white p-1.5 pb-5 shadow-window ${rotate}`
+  const inner = (
+    <>
       <div className="flex h-[96px] items-center justify-center overflow-hidden border border-ink/10 bg-paper-dark">
         {item.image ? (
-          // eslint-disable-next-line jsx-a11y/img-redundant-alt
-          <img src={item.image} alt={item.label} className="h-full w-full object-cover" />
+          <img src={withBase(item.image)} alt={item.label} className="h-full w-full object-cover" />
         ) : (
           <span className="px-2 text-center font-pixel text-[7px] uppercase leading-relaxed text-ink/35">
             foto / screenshot
           </span>
         )}
       </div>
-      <figcaption className="mt-1.5 px-0.5 text-center font-sans text-[10px] leading-tight text-ink/70">
+      <div className="mt-1.5 px-0.5 text-center font-sans text-[10px] leading-tight text-ink/70">
         {item.label}
-      </figcaption>
+      </div>
+    </>
+  )
+  return item.image ? (
+    <a
+      href={withBase(item.image)}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={`${item.label} — klik om te vergroten`}
+      className={`${cls} transition-transform hover:-translate-y-0.5`}
+    >
+      {inner}
+    </a>
+  ) : (
+    <figure className={cls} title="Bewijs — voeg een screenshot/foto toe (zie src/data/apps.ts)">
+      {inner}
     </figure>
+  )
+}
+
+function DocCard({ item }: { item: BewijsItem }) {
+  const isPdf = /\.pdf($|\?)/i.test(item.href!)
+  return (
+    <a
+      href={withBase(item.href!)}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex w-[200px] shrink-0 items-center gap-2 border-2 border-ink/70 bg-paper-dark px-2.5 py-2 shadow-icon transition-colors hover:bg-white"
+    >
+      <span className="grid h-9 w-7 shrink-0 place-items-center border border-ink/50 bg-white text-[8px] font-pixel text-accent-dark">
+        {isPdf ? 'PDF' : 'WEB'}
+      </span>
+      <span className="min-w-0">
+        <span className="block font-sans text-[12px] font-medium leading-snug text-ink line-clamp-2">
+          {item.label}
+        </span>
+        <span className="font-pixel text-[8px] uppercase text-ink/50 group-hover:text-accent-dark">
+          openen ↗
+        </span>
+      </span>
+    </a>
   )
 }
 
@@ -109,10 +146,14 @@ export default function AppContent({ app }: { app: AppItem }) {
       {app.bewijs.length > 0 && (
         <>
           <SectionLabel>Bewijs</SectionLabel>
-          <div className="no-scrollbar -mx-1 mt-2 flex gap-3 overflow-x-auto px-1 pb-2">
-            {app.bewijs.map((b, i) => (
-              <Polaroid key={i} item={b} rotate={POLAROID_ROTATIONS[i % POLAROID_ROTATIONS.length]} />
-            ))}
+          <div className="no-scrollbar -mx-1 mt-2 flex flex-wrap items-center gap-3 px-1 pb-2">
+            {app.bewijs.map((b, i) =>
+              b.href ? (
+                <DocCard key={i} item={b} />
+              ) : (
+                <Polaroid key={i} item={b} rotate={POLAROID_ROTATIONS[i % POLAROID_ROTATIONS.length]} />
+              ),
+            )}
           </div>
         </>
       )}

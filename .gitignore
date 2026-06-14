@@ -3,6 +3,16 @@ dist
 dist-ssr
 .shots
 *.local
+
+# Losse bronbestanden in de projectroot niet meenemen (de site linkt naar
+# nette kopieën in public/bewijs/). Voeg bewijs toe in public/bewijs/.
+/*.pdf
+/*.docx
+/*.jpg
+/*.jpeg
+/*.png
+/*.webp
+/*.heic
 .DS_Store
 .vscode/*
 !.vscode/extensions.json

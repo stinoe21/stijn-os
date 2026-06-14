@@ -41,7 +41,7 @@ body {
   }
 
   .retro-chip {
-    @apply inline-flex items-center gap-1 font-pixel text-[9px] uppercase tracking-tight
+    @apply inline-flex items-center gap-1 font-pixel text-[10px] uppercase tracking-tight
       px-2 py-1 border border-ink/40 bg-paper-dark text-ink/80;
   }
 }

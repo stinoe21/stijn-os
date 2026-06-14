@@ -6,7 +6,7 @@ import CriteriaBadge from './CriteriaBadge'
 function SectionLabel({ children }: { children: ReactNode }) {
   return (
     <div className="mb-1 mt-5 flex items-center gap-2">
-      <span className="font-pixel text-[9px] uppercase tracking-wide text-accent-dark">{children}</span>
+      <span className="font-pixel text-[10.5px] uppercase tracking-wide text-accent-dark">{children}</span>
       <span className="h-px flex-1 bg-paper-line" />
     </div>
   )
@@ -25,7 +25,7 @@ function Polaroid({ item, rotate }: { item: BewijsItem; rotate: string }) {
           </span>
         )}
       </div>
-      <div className="mt-1.5 px-0.5 text-center font-sans text-[10px] leading-tight text-ink/70">
+      <div className="mt-1.5 px-0.5 text-center font-sans text-[11px] leading-tight text-ink/70">
         {item.label}
       </div>
     </>
@@ -56,14 +56,14 @@ function DocCard({ item }: { item: BewijsItem }) {
       rel="noopener noreferrer"
       className="group flex w-[200px] shrink-0 items-center gap-2 border-2 border-ink/70 bg-paper-dark px-2.5 py-2 shadow-icon transition-colors hover:bg-white"
     >
-      <span className="grid h-9 w-7 shrink-0 place-items-center border border-ink/50 bg-white text-[8px] font-pixel text-accent-dark">
+      <span className="grid h-9 w-7 shrink-0 place-items-center border border-ink/50 bg-white text-[9px] font-pixel text-accent-dark">
         {isPdf ? 'PDF' : 'WEB'}
       </span>
       <span className="min-w-0">
-        <span className="block font-sans text-[12px] font-medium leading-snug text-ink line-clamp-2">
+        <span className="block font-sans text-[13px] font-medium leading-snug text-ink line-clamp-2">
           {item.label}
         </span>
-        <span className="font-pixel text-[8px] uppercase text-ink/50 group-hover:text-accent-dark">
+        <span className="font-pixel text-[9px] uppercase text-ink/50 group-hover:text-accent-dark">
           openen ↗
         </span>
       </span>
@@ -78,9 +78,9 @@ export default function AppContent({ app }: { app: AppItem }) {
   const isChangelog = app.id === 'update'
 
   return (
-    <div className="font-sans text-[13.5px] leading-relaxed text-ink">
+    <div className="font-sans text-[15px] leading-relaxed text-ink">
       {/* Teaser + criteria */}
-      <p className="font-pixel text-[9px] uppercase tracking-wide text-ink/50">{app.teaser}</p>
+      <p className="font-pixel text-[10.5px] uppercase tracking-wide text-ink/50">{app.teaser}</p>
       {app.criteria.length > 0 && (
         <div className="mt-2 flex flex-wrap gap-1.5">
           {app.criteria.map((c) => (
@@ -89,7 +89,7 @@ export default function AppContent({ app }: { app: AppItem }) {
         </div>
       )}
 
-      {app.intro && <p className="mt-4 text-[14px]">{app.intro}</p>}
+      {app.intro && <p className="mt-4 text-[15.5px]">{app.intro}</p>}
 
       {/* Detail */}
       {app.detail.length > 0 && (
@@ -121,8 +121,8 @@ export default function AppContent({ app }: { app: AppItem }) {
           <div className="mt-1 divide-y divide-paper-line border border-paper-line bg-paper-dark/40">
             {app.vertaaltabel.map((row, i) => (
               <div key={i} className="grid grid-cols-[auto,1fr] items-start gap-2 px-2 py-1.5 sm:grid-cols-[160px,1fr]">
-                <span className="font-pixel text-[10px] text-retroblue">{row.van}</span>
-                <span className="text-[13px] text-ink/80">→ {row.naar}</span>
+                <span className="font-pixel text-[11px] text-retroblue">{row.van}</span>
+                <span className="text-[14.5px] text-ink/80">→ {row.naar}</span>
               </div>
             ))}
           </div>
@@ -131,7 +131,7 @@ export default function AppContent({ app }: { app: AppItem }) {
 
       {/* Reflectie */}
       <SectionLabel>Reflectie</SectionLabel>
-      <div className="mt-1 space-y-2 border-l-4 border-accent bg-accent/10 px-3 py-2 text-[13.5px] italic">
+      <div className="mt-1 space-y-2 border-l-4 border-accent bg-accent/10 px-3 py-2 text-[15px] italic">
         {app.reflectie.map((r, i) => (
           <p key={i}>{r}</p>
         ))}
@@ -139,7 +139,7 @@ export default function AppContent({ app }: { app: AppItem }) {
 
       {/* Quote */}
       {app.quote && (
-        <blockquote className="mt-5 text-center font-crt text-2xl leading-tight text-retroblue">
+        <blockquote className="mt-5 text-center font-crt text-3xl leading-tight text-retroblue">
           “{app.quote}”
         </blockquote>
       )}

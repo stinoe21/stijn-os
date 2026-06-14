@@ -41,7 +41,7 @@ export default function Desktop({ wm, isDesktop }: { wm: Wm; isDesktop: boolean 
       </div>
 
       {/* Rechterkolom: prikbord + legenda. Rechtsboven op desktop, in de flow op mobiel. */}
-      <div className="relative z-10 mx-auto mt-2 flex w-[210px] flex-col items-center gap-3 px-3 pb-4 md:absolute md:right-4 md:top-4 md:mt-0 md:w-auto md:px-0 md:pb-0">
+      <div className="relative z-10 mx-auto mt-2 flex w-[230px] flex-col items-center gap-3 px-3 pb-4 md:absolute md:right-4 md:top-4 md:mt-0 md:w-auto md:px-0 md:pb-0">
         <Corkboard onOpenReadme={() => wm.openWindow('readme')} />
         <Legend />
       </div>

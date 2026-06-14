@@ -22,7 +22,7 @@ export default function DesktopIcon({
           <span className="absolute -right-1 -top-1 h-3 w-3 rounded-full border border-ink/50 bg-accent-light" />
         )}
       </span>
-      <span className="font-pixel text-[8px] leading-tight text-paper text-shadow-pixel sm:text-[9px]">
+      <span className="font-pixel text-[9px] leading-tight text-paper text-shadow-pixel sm:text-[10px]">
         {app.fileName}
       </span>
     </button>

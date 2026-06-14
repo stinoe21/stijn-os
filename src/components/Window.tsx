@@ -63,7 +63,7 @@ export default function Window({
       className={[
         'flex animate-window-in flex-col border-2 border-ink bg-paper shadow-window',
         isDesktop
-          ? 'absolute w-[min(460px,86vw)]'
+          ? 'absolute w-[min(500px,88vw)]'
           : 'fixed inset-x-2 bottom-2 top-12',
       ].join(' ')}
     >
@@ -93,7 +93,7 @@ export default function Window({
 
       {/* Inhoud */}
       <div className="window-scroll min-h-0 flex-1 overflow-y-auto bg-paper px-4 py-3">
-        <h2 className="font-crt text-3xl leading-none text-ink">{app.title}</h2>
+        <h2 className="font-crt text-4xl leading-none text-ink">{app.title}</h2>
         <div className="mt-3">
           <AppContent app={app} />
         </div>

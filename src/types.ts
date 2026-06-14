@@ -68,8 +68,8 @@ export interface AppItem {
   detail: string[]
   /** Optionele "vertaaltabel" (techniek → klantwaarde), alleen voor Vertaler.app. */
   vertaaltabel?: { van: string; naar: string }[]
-  /** Reflectie-blok. */
-  reflectie: string
+  /** Reflectie-blok (één of meer alinea's). */
+  reflectie: string[]
   /** Optionele markante quote. */
   quote?: string
   /** Bewijs/voorbeelden. */

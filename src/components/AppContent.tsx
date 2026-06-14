@@ -131,9 +131,11 @@ export default function AppContent({ app }: { app: AppItem }) {
 
       {/* Reflectie */}
       <SectionLabel>Reflectie</SectionLabel>
-      <p className="mt-1 border-l-4 border-accent bg-accent/10 px-3 py-2 text-[13.5px] italic">
-        {app.reflectie}
-      </p>
+      <div className="mt-1 space-y-2 border-l-4 border-accent bg-accent/10 px-3 py-2 text-[13.5px] italic">
+        {app.reflectie.map((r, i) => (
+          <p key={i}>{r}</p>
+        ))}
+      </div>
 
       {/* Quote */}
       {app.quote && (

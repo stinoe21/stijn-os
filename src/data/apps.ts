@@ -6,9 +6,10 @@ import type { AppItem } from '../types'
 //  Elke `AppItem` is één programma/venster op het bureaublad.
 //
 //  Bewijs/screenshots toevoegen?
-//   1. Zet je afbeelding in de map  /public/bewijs/   (bv. keynote.jpg)
-//   2. Verwijs ernaar bij `bewijs` met  image: '/bewijs/keynote.jpg'
-//   (zonder image verschijnt het bewijs als een 'lege' polaroid met bijschrift)
+//   1. Zet je bestand in  /public/bewijs/   (bv. keynote.jpg of verslag.pdf)
+//   2. Foto  -> image: '/bewijs/foto.png'   (polaroid, klikbaar om te vergroten)
+//      Document/link -> href: '/bewijs/verslag.pdf'  of  href: 'https://...'
+//   Het base-path wordt automatisch toegevoegd.
 // ============================================================================
 
 export const KERNZIN =
@@ -28,15 +29,15 @@ export const APPS: AppItem[] = [
     accent: true,
     criteria: [],
     intro:
-      'Dit is Stijn OS: een klein besturingssysteem dat ik zelf heb gebouwd, als bewijs én als verhaal van mijn ontwikkeling tijdens de minor Ondernemerschap met Kaires.',
+      'Welkom in Stijn OS: een klein besturingssysteem dat ik zelf heb gebouwd als vorm én bewijs van mijn persoonlijke ontwikkeling tijdens de minor Ondernemerschap met Kaires.',
     detail: [
-      'Elk programma op dit bureaublad opent een onderdeel van mijn groei: techniek, het verhaal van Kaires, sales, mijn persoonlijkheid, risico en mijn volgende stappen.',
-      'Rechtsboven zie je een meter met de vijf beoordelingscriteria. Elke keer dat je een venster opent, kleurt het bijbehorende criterium in — zo zie je precies waar wat wordt afgedekt.',
-      'Het feit dat deze site bestaat, is zelf een stukje bewijs: een jaar geleden had ik dit niet kunnen bouwen.',
+      'Elk programma op dit bureaublad opent een onderdeel van mijn groei: techniek, storytelling, sales, netwerk, persoonlijkheid, risico, zakelijke verantwoordelijkheid en mijn volgende leerdoelen.',
+      'Rechtsboven zie je de vijf beoordelingscriteria. Elk venster laat zien welk criterium wordt afgedekt. Zo blijft de vorm creatief, maar is de inhoud gekoppeld aan de beoordeling.',
+      'Het feit dat deze site bestaat, is zelf ook bewijs van ontwikkeling. Een jaar geleden had ik dit technisch niet kunnen bouwen. Maar belangrijker: ik heb geleerd dat techniek pas waarde krijgt als je het begrijpbaar, verkoopbaar en toepasbaar maakt binnen een onderneming.',
     ],
-    reflectie:
-      'Ik koos bewust voor een besturingssysteem als vorm. Het laat in één klap zien wat mijn grootste ontwikkeling is: techniek niet als doel, maar als manier om een idee tastbaar, begrijpbaar en bruikbaar te maken.',
-    quote: KERNZIN,
+    reflectie: [
+      'Ik koos bewust voor een besturingssysteem als vorm, omdat mijn ontwikkeling niet uit één rechte lijn bestaat. Ik heb op verschillende lagen geleerd: technisch bouwen, mijn verhaal uitleggen, naar buiten treden, omgaan met mijn valkuilen en meer verantwoordelijkheid nemen voor de zakelijke kant.',
+    ],
     bewijs: [],
     vervolgstap: KERNONTWIKKELING,
   },
@@ -46,23 +47,23 @@ export const APPS: AppItem[] = [
     id: 'cto',
     fileName: 'CTO.exe',
     title: 'CTO worden door te doen',
-    teaser: 'Technische groei & bijdrage',
+    teaser: 'Technische groei & bijdrage aan de onderneming',
     icon: 'cto',
     criteria: ['professioneel', 'bijdrage'],
     intro:
-      'Op 11 maart schreef ik dat ik mij wilde ontwikkelen in de technische kant van de onderneming. Dat was toen nog abstract. Tijdens de minor heb ik het concreet gemaakt door echt te bouwen.',
+      'Op 11 maart schreef ik dat ik mij wilde ontwikkelen in de technische kant van de onderneming. Dat was toen nog vrij abstract. Tijdens de minor heb ik dat concreet gemaakt door echt te bouwen.',
     detail: [
-      'Binnen mijn opleiding krijg ik nauwelijks software engineering. Tijdens deze minor heb ik daar heel bewust voor gekozen.',
-      'Ik heb dingen gedaan die ik hiervoor nog nooit had gedaan: websites bouwen, applicaties opzetten en installeren, automatiseringen maken en technische systemen aan elkaar koppelen.',
-      'Vrijwel alles wat ik met Kaires technisch heb gedaan, was nieuw voor mij — of op een heel ander niveau dan ervoor. Ik heb daar enorme stappen in gezet.',
+      'Binnen mijn opleiding krijg ik nauwelijks software engineering. Daarom moest ik dit grotendeels zelf uitzoeken. Ik heb websites gebouwd, applicaties opgezet, automatiseringen gemaakt en technische systemen aan elkaar gekoppeld. Vrijwel alles wat ik technisch voor Kaires deed, had ik hiervoor nog niet op dit niveau gedaan.',
     ],
-    reflectie:
-      'Techniek was voor mij geen losse hobby. Ik bouwde om Kaires te laten bestaan als onderneming: professioneler, testbaar en verkoopbaar. Daardoor veranderde mijn rol van "iemand die techniek interessant vindt" naar CTO die verantwoordelijkheid neemt voor wat we technisch leveren.',
+    reflectie: [
+      'Mijn technische groei was groot, maar het belangrijkste inzicht is dat techniek binnen een onderneming nooit los staat. Ik bouwde niet om te laten zien dat ik kon bouwen. Ik bouwde om Kaires professioneler, testbaarder en verkoopbaarder te maken.',
+      'Tegelijkertijd zie ik ook mijn valkuil. Bouwen voelt voor mij soms veiliger dan verkopen. In techniek zie ik snel vooruitgang, terwijl commerciële gesprekken, prijs en commitment vragen spannender zijn. Juist daarom moest ik leren om techniek niet als schuilplek te gebruiken, maar als middel om de onderneming vooruit te helpen.',
+    ],
     quote: 'Ik bouwde niet om te bouwen. Ik bouwde zodat Kaires kon bestaan als onderneming.',
     // De live Kaires-website is hét tastbare bewijs van wat ik technisch bouwde.
     bewijs: [{ label: 'Kaires-website (live, kaires.nl)', href: 'https://kaires.nl/' }],
     vervolgstap:
-      'Software engineering verder verdiepen, maar altijd gekoppeld aan klantwaarde en haalbaarheid.',
+      'Software engineering verder verdiepen, maar elke technische keuze blijven koppelen aan klantwaarde, haalbaarheid en businesswaarde.',
   },
 
   // --------------------------------------------------------------------------
@@ -74,11 +75,8 @@ export const APPS: AppItem[] = [
     icon: 'vertaler',
     criteria: ['competenties', 'bijdrage'],
     intro:
-      'Een belangrijke groei is dat ik technische aspecten begrijpbaar kan maken voor mensen die niet technisch zijn.',
-    detail: [
-      'Als CTO moet je niet alleen zelf snappen hoe iets werkt, maar ook kunnen uitleggen waaróm het belangrijk is — aan klanten, coaches, partners en je eigen team.',
-      'Ik leerde technische taal te vertalen naar iets dat waarde en vertrouwen oplevert:',
-    ],
+      'Een belangrijke ontwikkeling is dat ik technische aspecten begrijpbaar heb leren maken voor mensen die niet technisch zijn. Als CTO moet je niet alleen zelf snappen hoe iets werkt, maar ook kunnen uitleggen waarom het belangrijk is.',
+    detail: [],
     vertaaltabel: [
       { van: 'Weighted matrix', naar: 'een systeem dat context vertaalt naar muziekkeuzes' },
       { van: 'Raspberry Pi / speler', naar: 'een klein apparaat dat muziek lokaal en stabiel afspeelt' },
@@ -88,11 +86,13 @@ export const APPS: AppItem[] = [
         naar: 'de plek waar muziek, instellingen en klantinformatie logisch samenkomen',
       },
     ],
-    reflectie:
-      'Door techniek te vertalen naar klantwaarde, haalbaarheid en vertrouwen werd het niet alleen iets van mij, maar iets waar het hele team en onze klanten iets aan hadden. Dat is voor een onderneming onmisbaar.',
+    reflectie: [
+      'Ik merkte dat technische taal snel afstand kan creëren. Als ik te veel praat vanuit tools, systemen of functies, begrijpen mensen misschien wat ik heb gebouwd, maar niet waarom het waardevol is.',
+      'Mijn groei zit erin dat ik techniek beter ben gaan vertalen naar klantwaarde, vertrouwen en haalbaarheid. Daardoor werd techniek niet alleen iets van mij, maar iets waar Max, klanten, coaches en partners iets mee konden.',
+    ],
     bewijs: [],
     vervolgstap:
-      'Technische keuzes in elk gesprek nog scherper koppelen aan businesswaarde.',
+      'Nog scherper leren uitleggen wat technische keuzes opleveren in gewone taal: minder technisch bewijs, meer ondernemerswaarde.',
   },
 
   // --------------------------------------------------------------------------
@@ -104,15 +104,16 @@ export const APPS: AppItem[] = [
     icon: 'keynote',
     criteria: ['professioneel', 'naarbuiten'],
     intro:
-      'Mijn oorspronkelijke leerdoel was om steviger te worden in salesgesprekken voor Kaires — ik wilde een aantal salescalls voeren om overtuigender te worden.',
+      'Mijn oorspronkelijke leerdoel was om steviger te worden in salesgesprekken voor Kaires. Eerst dacht ik daarbij vooral aan salescalls voeren.',
     detail: [
-      'In overleg met mijn coach Max en met Oskar verschoof onze aanpak. In plaats van veel losse cold calls kozen we voor warme contacten, persoonlijk contact en vooral de keynote.',
-      'Dat was geen afzwakking van mijn doel, maar een realistischer en sterkere ondernemersactie. De keynote werd eigenlijk één groot salesmoment: ik hoefde niet één klant te overtuigen, maar een hele zaal stakeholders tegelijk.',
-      'Ik moest Kaires scherp uitleggen, urgentie creëren, vertrouwen winnen en daarna gericht opvolgen.',
-      'Max gaf mij mee om niet alleen resultaatgedreven te kijken (hoeveel klanten haalden we binnen), maar actiegedreven: welke acties brengen ons dichter bij klanten, partners en validatie?',
+      'Tijdens de minor verschoof onze aanpak. In overleg met Max en Oskar kozen we niet voor veel losse cold calls, maar voor warme contacten, persoonlijk contact en vooral de keynote. Dat was geen afzwakking van mijn leerdoel, maar juist een sterkere ondernemersactie.',
+      'De keynote werd eigenlijk één groot salesmoment. Ik moest Kaires niet technisch, maar scherp, menselijk en zakelijk uitleggen. Niet één klant overtuigen, maar een hele zaal stakeholders meenemen in het probleem, de oplossing en de waarde van Kaires.',
+      'Max gaf mij mee om niet alleen resultaatgedreven te kijken, maar actiegedreven. Dus niet alleen: hoeveel klanten hebben we direct binnengehaald? Maar: welke acties brengen ons dichter bij klanten, partners, validatie en groei?',
     ],
-    reflectie:
-      'Ik leerde dat sales niet alleen bellen is, maar ook zichtbaar worden, je verhaal testen, vertrouwen opbouwen en opvolgen. Uit mijn netwerk-assessment bleek het ook: elke keer dat ik Kaires uitlegde, werd het verhaal scherper.',
+    reflectie: [
+      'Ik leerde dat sales niet alleen bellen is. Sales is ook zichtbaar worden, vertrouwen opbouwen, je verhaal testen en daarna opvolgen.',
+      'Tegelijkertijd zit hier mijn volgende uitdaging. Ik kan interesse opwekken en een verhaal neerzetten, maar ik wil scherper worden in het moment daarna: doorvragen, prijs benoemen, commitment vragen en concrete vervolgstappen vastleggen.',
+    ],
     quote: 'Elke keer dat ik Kaires uitlegde, werd het verhaal scherper.',
     bewijs: [{ label: 'Onze keynote op het podium (Max & Stijn)', image: '/bewijs/keynote-podium.jpeg' }],
     vervolgstap:
@@ -128,13 +129,14 @@ export const APPS: AppItem[] = [
     icon: 'netwerk',
     criteria: ['naarbuiten'],
     intro:
-      'Ik ben vaker en bewuster naar buiten getreden met Kaires — niet alleen binnen school, maar ook met coaches, stakeholders, events, potentiële klanten en partners.',
+      'Tijdens de minor ben ik vaker en bewuster naar buiten getreden met Kaires. Niet alleen binnen school, maar ook richting coaches, stakeholders, events, potentiële klanten en partners.',
     detail: [
-      'Ik merkte dat persoonlijk en warm contact bij mij beter werkt dan koude acquisitie.',
-      'Hoe vaker ik op events mijn bedrijf uitlegde, hoe sterker het verhaal werd — dat bevestigde ook mijn netwerk-assessment.',
+      'Ik merkte dat persoonlijk en warm contact beter bij mij past dan koude acquisitie. Op events en in gesprekken kon ik beter aansluiten, luisteren en uitleggen. Hoe vaker ik Kaires uitlegde, hoe scherper ons verhaal werd.',
     ],
-    reflectie:
-      'Ik leerde dat een netwerk pas waardevol wordt als je er actie aan koppelt: opvolgen, vragen stellen, een vervolgafspraak maken. Verbinden is mijn kracht; daar bewust iets mee dóén is mijn groei.',
+    reflectie: [
+      'Mijn kracht is contact maken en verbinding leggen. Maar een netwerk heeft pas ondernemerswaarde als je er ook actie aan koppelt. Alleen een goed gesprek is niet genoeg. De vervolgstap bepaalt of een contact waarde krijgt voor de onderneming.',
+      'Daar ligt voor mij nog groei. Ik wil consequenter worden in opvolging: na elk gesprek sneller bepalen wat de volgende actie is, wie verantwoordelijk is en wanneer er contact wordt gelegd.',
+    ],
     bewijs: [{ label: 'Netwerkverslag Kaires', href: '/bewijs/netwerkverslag-kaires.pdf' }],
     vervolgstap: 'Contacten consequenter omzetten in concrete vervolgstappen.',
   },
@@ -144,18 +146,19 @@ export const APPS: AppItem[] = [
     id: 'spiegel',
     fileName: 'Spiegel.sys',
     title: 'Waarnemer & vredestichter',
-    teaser: 'Mijn persoonlijkheid (Enneagram)',
+    teaser: 'Mijn persoonlijkheid en competenties',
     icon: 'spiegel',
     criteria: ['competenties'],
     intro:
       'Uit mijn Enneagramtest kwam naar voren dat ik sterk ben als waarnemer en vredestichter.',
     detail: [
-      'Kracht: ik kan goed luisteren, verbanden zien, rust bewaren en mensen verbinden.',
-      'Valkuil: ik kan soms te snel meegaan, te voorzichtig zijn of conflict vermijden.',
-      'Tijdens de minor merkte ik dat deze kant me hielp in gesprekken en samenwerking, maar me soms in de weg zat bij scherpe keuzes, prijs of het stevig innemen van mijn eigen standpunt.',
+      'Mijn kracht is dat ik goed kan luisteren, verbanden zie, rust bewaar en mensen verbind. Dat heeft mij geholpen in de samenwerking met Max, in gesprekken met stakeholders en in het verwerken van feedback.',
+      'Mijn valkuil is dat ik soms te snel meebeweeg. Ik kan voorzichtig zijn, conflict vermijden of te lang wachten voordat ik mijn eigen standpunt duidelijk maak.',
     ],
-    reflectie:
-      'Mijn groei zit erin dat ik vaker richting ben gaan geven: als CTO, in technische keuzes en in het verhaal van Kaires. Mijn doel is niet om minder verbindend te worden, maar om verbinding te combineren met stevigheid.',
+    reflectie: [
+      'Tijdens de minor merkte ik dat mijn verbindende kant waardevol is, maar niet genoeg. Ondernemerschap vraagt ook dat je richting geeft. Als CTO moest ik technische keuzes maken. In de keynote moest ik duidelijk staan voor het verhaal van Kaires. En in commerciële situaties moest ik leren dat aardig en meedenkend zijn niet hetzelfde is als scherp ondernemerschap.',
+      'Mijn doel is niet om minder verbindend te worden. Mijn doel is om verbinding te combineren met stevigheid.',
+    ],
     quote: 'Verbinden is mijn kracht. Richting geven is mijn groei.',
     bewijs: [{ label: 'Ontwikkelcanvas — 11 maart', href: '/bewijs/ontwikkelcanvas.pdf' }],
     vervolgstap: 'Minder snel meebewegen; sneller en duidelijker richting geven.',
@@ -170,13 +173,14 @@ export const APPS: AppItem[] = [
     icon: 'risico',
     criteria: ['risico'],
     intro:
-      'Ondernemen betekende dat we met Kaires naar buiten moesten terwijl nog niet alles perfect was.',
+      'Mijn risico zat tijdens deze minor niet vooral in grote financiële investeringen, maar in zichtbaar worden met iets dat nog niet perfect was.',
     detail: [
-      'Ik moest technische keuzes maken zonder dat ik vooraf alles wist of zeker wist dat het zou werken.',
-      'De keynote, klantgesprekken en de technische bouw vroegen allemaal om handelen ondanks onzekerheid.',
+      'Met Kaires moesten we naar buiten terwijl het concept, de techniek en het verhaal nog in ontwikkeling waren. Ik moest technische keuzes maken zonder vooraf precies te weten of alles zou werken. Ook de keynote vroeg om lef: we stonden daar met een onderneming die nog volop in opbouw was.',
     ],
-    reflectie:
-      'Ik ben minder gaan wachten op zekerheid en meer gaan leren door actie. Fouten werden onderdeel van het proces in plaats van iets om te vermijden.',
+    reflectie: [
+      'Ik ben minder gaan wachten op zekerheid en meer gaan leren door actie. Dat is voor mij een belangrijke ondernemersles. Fouten en onzekerheid horen niet pas aan het einde geëvalueerd te worden; ze zijn onderdeel van het proces.',
+      'Mijn valkuil is dat ik soms eerst wil begrijpen of bouwen tot iets goed genoeg voelt. Maar ondernemerschap vraagt soms dat je eerder test, eerder feedback vraagt en eerder naar buiten gaat.',
+    ],
     quote: 'Ik leerde door te doen, niet door te wachten tot ik zeker wist dat het goed zat.',
     bewijs: [],
     vervolgstap: 'Bewuster afgewogen risico’s nemen en sneller valideren.',
@@ -191,19 +195,21 @@ export const APPS: AppItem[] = [
     icon: 'boekhouding',
     criteria: ['professioneel', 'bijdrage'],
     intro:
-      'Naast techniek, verhaal en sales ben ik ook gegroeid in de zakelijke basis van ondernemen.',
+      'Naast techniek, storytelling en sales ben ik ook gegroeid in de zakelijke basis van ondernemen.',
     detail: [
-      'In mijn ontwikkelcanvas van 11 maart stond al dat ik me wilde ontwikkelen in financiële en administratieve onderdelen.',
-      'Tijdens de minor heb ik dat concreter gemaakt: facturen versturen en kosten bijhouden in Sheets.',
-      'Dat klinkt minder spectaculair dan een keynote of een applicatie, maar voor ondernemerschap is het essentieel.',
+      'In mijn ontwikkelcanvas van 11 maart stond al dat ik mij wilde ontwikkelen in financiële en administratieve onderdelen. Tijdens de minor heb ik dat concreter gemaakt door facturen te versturen en kosten bij te houden in Sheets.',
+      'Dat klinkt minder spectaculair dan een keynote of applicatie, maar voor ondernemerschap is het essentieel.',
     ],
-    reflectie:
-      'Ik ben geen boekhouder geworden, maar ik ben wél meer eigenaar geworden van de financiële basis van onze onderneming. Ik leerde dat een bedrijf niet alleen draait om een goed idee of een werkend product, maar ook om overzicht, verantwoordelijkheid en discipline.',
+    reflectie: [
+      'Ik ben geen boekhouder geworden, maar ik ben wel meer eigenaar geworden van de financiële basis van onze onderneming. Ik leerde dat een bedrijf niet alleen draait om een goed idee, een werkend product of een sterk verhaal, maar ook om overzicht, verantwoordelijkheid en discipline.',
+      'Hier zit ook nog een duidelijk leerpunt. Ik heb meer grip gekregen op administratie, maar ik wil financiën minder zien als iets dat achteraf moet worden bijgehouden en meer als stuurinformatie voor keuzes.',
+    ],
     quote:
       'Ondernemen werd concreter toen ik niet alleen aan Kaires bouwde, maar ook ging begrijpen wat er financieel nodig is om het draaiende te houden.',
-    // De factuur (2026-0001.pdf) staat klaar, maar is privacygevoelig (klantgegevens)
-    // en is daarom nog NIET gepubliceerd. Zeg het als je 'm toch wilt toevoegen.
-    bewijs: [{ label: 'Kostenoverzicht in Sheets', image: '/bewijs/kostentabel-kaires.png' }],
+    bewijs: [
+      { label: 'Kostenoverzicht in Sheets', image: '/bewijs/kostentabel-kaires.png' },
+      { label: 'Factuur 2026-0001 (gevoelige gegevens afgedekt)', image: '/bewijs/factuur-afgedekt.png' },
+    ],
     vervolgstap:
       'Beter worden in begrotingen, marges en prijsstrategie, zodat ik zakelijke keuzes onderbouw met cijfers en niet alleen op gevoel.',
   },
@@ -217,20 +223,21 @@ export const APPS: AppItem[] = [
     icon: 'update',
     criteria: ['professioneel'],
     intro:
-      'Een besturingssysteem is nooit af. Dit zijn de updates die ik voor mezelf heb gepland. Ik ben technisch en als ondernemer sterk gegroeid, maar ik ben er nog niet — en dat is precies de bedoeling.',
+      'Een besturingssysteem is nooit af. Deze updates zijn mijn volgende leerdoelen. Ik ben technisch en ondernemend sterk gegroeid, maar ik ben er nog niet. Mijn volgende ontwikkeling zit vooral in commerciële scherpte, financiële onderbouwing en steviger richting geven.',
     detail: [
       'Scherper leren closen in commerciële gesprekken.',
       'Prijs, commitment en vervolgstappen duidelijker durven benoemen.',
       'Technische keuzes nog beter vertalen naar businesswaarde.',
-      'Minder snel meebewegen, sneller richting geven.',
-      'Software engineering verder verdiepen — altijd gekoppeld aan klantwaarde en ondernemerschap.',
+      'Minder snel meebewegen en sneller richting geven.',
+      'Software engineering verder verdiepen, maar altijd gekoppeld aan klantwaarde en ondernemerschap.',
+      'Financiële keuzes sterker onderbouwen met cijfers, marges en planning.',
     ],
-    reflectie:
-      'Deze leerdoelen zijn niet bedacht voor een formulier; ze komen rechtstreeks voort uit wat ik deze minor tegenkwam toen ik moest kiezen, presenteren, verkopen en leveren.',
+    reflectie: [
+      'Deze leerdoelen zijn niet bedacht voor een formulier. Ze komen voort uit wat ik deze minor tegenkwam toen ik moest bouwen, presenteren, verkopen, uitleggen en verantwoordelijkheid nemen.',
+    ],
     quote:
       'Mijn volgende stap is niet alleen beter bouwen, maar ook scherper richting geven aan wat er met dat bouwen mogelijk wordt.',
     bewijs: [],
-    vervolgstap:
-      'Verbinding (mijn kracht) combineren met stevigheid en commerciële scherpte.',
+    vervolgstap: 'Verbinding, mijn kracht, combineren met stevigheid en commerciële scherpte.',
   },
 ]

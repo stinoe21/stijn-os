@@ -109,7 +109,7 @@ export const APPS: AppItem[] = [
       'Tijdens de minor verschoof onze aanpak. In overleg met Max en Oskar kozen we niet voor veel losse cold calls, maar voor warme contacten, persoonlijk contact en vooral de keynote. Dat was geen afzwakking van mijn leerdoel, maar juist een sterkere ondernemersactie.',
       'De keynote werd eigenlijk één groot salesmoment. Ik moest Kaires niet technisch, maar scherp, menselijk en zakelijk uitleggen. Niet één klant overtuigen, maar een hele zaal stakeholders meenemen in het probleem, de oplossing en de waarde van Kaires.',
       'Presenteren was voor mij niet alleen een communicatieskill, maar ook een persoonlijke drempel. Juist daarom werd de keynote een belangrijk ontwikkelmoment: ik moest niet alleen iets vertellen, maar echt gaan staan voor Kaires.',
-      'En het bleef niet bij die ene keynote. Ik heb binnen én buiten de minor ontzettend veel gepitcht: voor Google (terug te vinden in ons netwerkverslag), bij een pitchwedstrijd om € 1.000 — waar ik er alleen voor stond en dat aangreep om mezelf in het diepe te gooien — en bij veel potentiële klanten.',
+      'En het bleef niet bij die ene keynote. Ik heb binnen én buiten de minor ontzettend veel gepitcht: voor Google (terug te vinden in ons netwerkverslag), bij Boost your Business — de pitchwedstrijd om € 1.000 binnen de minor, waar ik er alleen voor stond en mezelf bewust in het diepe gooide — en bij veel potentiële klanten.',
       'Max gaf mij mee om niet alleen resultaatgedreven te kijken, maar actiegedreven. Dus niet alleen: hoeveel klanten hebben we direct binnengehaald? Maar: welke acties brengen ons dichter bij klanten, partners, validatie en groei?',
     ],
     reflectie: [

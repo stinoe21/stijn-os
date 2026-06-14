@@ -157,12 +157,7 @@ export const APPS: AppItem[] = [
     reflectie:
       'Mijn groei zit erin dat ik vaker richting ben gaan geven: als CTO, in technische keuzes en in het verhaal van Kaires. Mijn doel is niet om minder verbindend te worden, maar om verbinding te combineren met stevigheid.',
     quote: 'Verbinden is mijn kracht. Richting geven is mijn groei.',
-    bewijs: [
-      // Enneagram-verslag volgt — voeg toe in public/bewijs/ en koppel hier
-      // met image: '/bewijs/...' of href: '/bewijs/...'
-      { label: 'Enneagram-uitslag' },
-      { label: 'Ontwikkelcanvas — 11 maart', href: '/bewijs/ontwikkelcanvas.pdf' },
-    ],
+    bewijs: [{ label: 'Ontwikkelcanvas — 11 maart', href: '/bewijs/ontwikkelcanvas.pdf' }],
     vervolgstap: 'Minder snel meebewegen; sneller en duidelijker richting geven.',
   },
 

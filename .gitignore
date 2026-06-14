@@ -13,6 +13,9 @@ dist-ssr
 /*.png
 /*.webp
 /*.heic
+
+# Persoonlijke documenten (ontwikkelcanvas v2 e.d.) — lokaal houden, niet publiceren
+/docs/
 .DS_Store
 .vscode/*
 !.vscode/extensions.json

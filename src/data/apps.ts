@@ -100,7 +100,7 @@ export const APPS: AppItem[] = [
     id: 'keynote',
     fileName: 'Keynote.exe',
     title: 'De keynote als grote salescall',
-    teaser: 'Sales, storytelling & opvolging',
+    teaser: 'Presenteren, pitchen & sales',
     icon: 'keynote',
     criteria: ['professioneel', 'naarbuiten'],
     intro:
@@ -108,10 +108,13 @@ export const APPS: AppItem[] = [
     detail: [
       'Tijdens de minor verschoof onze aanpak. In overleg met Max en Oskar kozen we niet voor veel losse cold calls, maar voor warme contacten, persoonlijk contact en vooral de keynote. Dat was geen afzwakking van mijn leerdoel, maar juist een sterkere ondernemersactie.',
       'De keynote werd eigenlijk één groot salesmoment. Ik moest Kaires niet technisch, maar scherp, menselijk en zakelijk uitleggen. Niet één klant overtuigen, maar een hele zaal stakeholders meenemen in het probleem, de oplossing en de waarde van Kaires.',
+      'Presenteren was voor mij niet alleen een communicatieskill, maar ook een persoonlijke drempel. Juist daarom werd de keynote een belangrijk ontwikkelmoment: ik moest niet alleen iets vertellen, maar echt gaan staan voor Kaires.',
+      'En het bleef niet bij die ene keynote. Ik heb binnen én buiten de minor ontzettend veel gepitcht: voor Google (terug te vinden in ons netwerkverslag), bij een pitchwedstrijd om € 1.000 — waar ik er alleen voor stond en dat aangreep om mezelf in het diepe te gooien — en bij veel potentiële klanten.',
       'Max gaf mij mee om niet alleen resultaatgedreven te kijken, maar actiegedreven. Dus niet alleen: hoeveel klanten hebben we direct binnengehaald? Maar: welke acties brengen ons dichter bij klanten, partners, validatie en groei?',
     ],
     reflectie: [
       'Ik leerde dat sales niet alleen bellen is. Sales is ook zichtbaar worden, vertrouwen opbouwen, je verhaal testen en daarna opvolgen.',
+      'Door het zó vaak te doen — van de keynote tot losse pitches — zakte de drempel en werd presenteren steeds meer een kracht in plaats van een spanningsbron.',
       'Tegelijkertijd zit hier mijn volgende uitdaging. Ik kan interesse opwekken en een verhaal neerzetten, maar ik wil scherper worden in het moment daarna: doorvragen, prijs benoemen, commitment vragen en concrete vervolgstappen vastleggen.',
     ],
     quote: 'Elke keer dat ik Kaires uitlegde, werd het verhaal scherper.',

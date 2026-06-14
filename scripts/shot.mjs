@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer-core'
 import { mkdirSync } from 'node:fs'
 
 const CHROME = 'C:/Program Files/Google/Chrome/Application/chrome.exe'
-const URL = 'http://localhost:4173/stijn-os/'
+const URL = process.env.SHOT_URL || 'http://localhost:4173/stijn-os/'
 mkdirSync('.shots', { recursive: true })
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))

@@ -1,0 +1,17 @@
+BEWIJS / SCREENSHOTS
+====================
+
+Zet hier je afbeeldingen (screenshots, foto's) neer, bijvoorbeeld:
+
+  public/bewijs/keynote.jpg
+  public/bewijs/kaires-website.png
+  public/bewijs/sheets-kosten.png
+
+Verwijs er vervolgens naar in  src/data/apps.ts  bij het juiste onderwerp:
+
+  bewijs: [
+    { label: 'Keynote', image: '/bewijs/keynote.jpg' },
+    { label: 'Kostenoverzicht in Sheets', image: '/bewijs/sheets-kosten.png' },
+  ]
+
+Een bewijs zonder "image" verschijnt als lege polaroid met alleen het bijschrift.

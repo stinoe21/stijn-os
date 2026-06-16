@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { APPS } from '../data/apps'
 import type { useWindows } from '../hooks/useWindows'
+import Clippy from './Clippy'
 import Corkboard from './Corkboard'
 import DesktopIcon from './DesktopIcon'
 import Legend from './Legend'
@@ -44,6 +45,11 @@ export default function Desktop({ wm, isDesktop }: { wm: Wm; isDesktop: boolean 
       <div className="relative z-10 mx-auto mt-2 flex w-[230px] flex-col items-center gap-3 px-3 pb-4 md:absolute md:right-4 md:top-4 md:mt-0 md:w-auto md:px-0 md:pb-0">
         <Corkboard onOpenReadme={() => wm.openWindow('readme')} />
         <Legend />
+      </div>
+
+      {/* Clippy-assistent (alleen op desktop, rechtsonder) */}
+      <div className="pointer-events-none absolute bottom-3 right-4 z-10 hidden md:block">
+        <Clippy onOpenReadme={() => wm.openWindow('readme')} />
       </div>
 
       {/* Vensters */}

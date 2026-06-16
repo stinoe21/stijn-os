@@ -45,8 +45,6 @@ async function shot(name, width, height, openLabels = [], closeAll = false, scro
 }
 
 await shot('desktop', 1440, 900, [], true)
-await shot('m-keynote', 390, 1400, ['Keynote.exe'])
-await shot('d-cto', 1440, 900, ['CTO.exe'])
 
 await browser.close()
 console.log('done')
